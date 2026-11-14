@@ -1,7 +1,7 @@
 # BÁO CÁO THỰC HÀNH DAY 06: DATA INGESTION ENGINEERING
 **Dự án:** Xây dựng Pipeline Data Ingestion & Đánh giá Retrieval Đa Chiến Lược  
 **Corpus:** Luật An ninh mạng số 116/2025/QH15 (37 trang PDF được OCR; 37/37 trang có văn bản sau trích xuất)  
-**Tác giả:** Học viên thực hiện Lab Day 06  
+**Tác giả:** Phạm Duy Thành · MSSV: 2A202604075 · Lớp: L3B  
 **Ngày thực hiện:** Tháng 11/2026  
 
 ---
@@ -14,7 +14,7 @@
 - **Quy mô:** PDF nguồn có 37 trang vật lý. Pipeline OCR tạo 37 bản ghi trang; cả 37/37 trang có văn bản sau trích xuất (`empty_pages_count = 0` trong manifest). Pipeline giữ nguyên các trang 1–37, không có bước loại trang theo loại trang. Chỉ số trang có văn bản được tính theo điều kiện `len(page.text.strip()) > 0` trong pipeline.
 - **OCR và chuẩn hóa dữ liệu:** PDF được OCR bằng Tesseract với ngôn ngữ tiếng Việt (`vie`), độ phân giải 300 DPI và cấu hình PSM 6 theo `starter/scripts/ocr_pdf.py`. Hàm `normalize_text` trong `starter/src/ingestion.py` chuẩn hóa Unicode NFC, thay thế NBSP/zero-width space/tab, chuẩn hóa ký tự xuống dòng, gộp các dòng trống liên tiếp và loại bỏ khoảng trắng thừa ở đầu/cuối dòng. Hàm này không hiệu đính lỗi nhận dạng từ ngữ của OCR.
 - **Lỗi OCR còn lại:** Văn bản vẫn còn một số lỗi nhận dạng như `Luật sô`, `hệ thông`, `ølan mạng`. Đây là giới hạn của bước OCR; khi evidence không khớp, cần đối chiếu trực tiếp với PDF gốc. Không coi các lỗi này là đã được tự động sửa.
-- **Siêu dữ liệu:** Phân tích và gán siêu dữ liệu chương (`chapter`: Chương I đến Chương VIII) dựa trên cấu trúc các điều luật.
+- **Siêu dữ liệu:** Hàm `get_chapter_for_page()` trong `starter/src/ingestion.py` gán `chapter` theo các khoảng số trang cố định tương ứng với ranh giới chương đã đối chiếu từ PDF nguồn. Đây là ánh xạ trang–chương được khai báo trong code, không phải quy trình OCR tự nhận diện chương.
 - **Manifest:** Được lưu trữ đầy đủ tại `starter/data/manifest.json`.
 
 ### 1.2. Mô hình Embedding và Vector Store
@@ -46,7 +46,7 @@
 - **Phân chia tập dữ liệu:**
   - **Dev set:** 15 câu (từ `q01` đến `q15`).
   - **Test set:** 5 câu (từ `q16` đến `q20`).
-- **Bộ lọc Metadata:** Có 4 câu hỏi kiểm tra bộ lọc `chapter` (`q07`, `q12` trong Dev; `q18`, `q19` trong Test).
+- **Bộ lọc Metadata:** Có 4 câu hỏi kiểm tra bộ lọc `chapter` (`q07`, `q12` trong Dev; `q18`, `q19` trong Test). Giá trị filter được cung cấp tường minh trong trường `filter` của từng mẫu benchmark như ngữ cảnh có sẵn trước truy xuất; không lấy từ đáp án hoặc gold source.
 - **Chứng cứ vàng (Gold Evidence):** Các câu hỏi có `gold_page`, `gold_source_id` và trích dẫn nguyên văn. Riêng q16 dùng hai đoạn evidence (`evidence_quotes`) trên trang 23–24; core Hit yêu cầu cả hai cùng có trong một chunk.
 
 ---
@@ -150,7 +150,7 @@ Kiểm tra thủ công trên **5 câu hỏi Test** $\times$ **Top-3 chunk** (t�
 
 ### 5.1. Yêu cầu môi trường
 - Python 3.12.14 (các dependencies được khóa tại `starter/requirements.txt`).
-- PostgreSQL 16 có extension pgvector đang lắng nghe tại cổng `55433` (Docker: `docker run -d -p 55433:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=day6_lab pgvector/pgvector:pg16`).
+- PostgreSQL 16 có extension pgvector tại cổng `55433`. Từ thư mục `starter/`, khởi chạy bằng `docker compose -p day6_student_starter up -d --wait`; cấu hình database mặc định đã đồng bộ với `starter/.env.example`.
 - Thư viện Python: `pip install -r starter/requirements.txt`.
 
 ### 5.2. Lệnh thực thi toàn bộ pipeline
