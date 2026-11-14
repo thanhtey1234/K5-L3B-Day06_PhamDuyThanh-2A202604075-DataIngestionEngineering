@@ -44,7 +44,7 @@ def get_chapter_for_page(page: int) -> str:
         return "Chương III"
     elif page <= 25:
         return "Chương IV"
-    elif page <= 27:
+    elif page <= 26:
         return "Chương V"
     elif page <= 30:
         return "Chương VI"

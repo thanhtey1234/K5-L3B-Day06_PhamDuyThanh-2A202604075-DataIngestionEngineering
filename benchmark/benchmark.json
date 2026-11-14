@@ -13,11 +13,11 @@
     "id": "q02",
     "type": "direct",
     "split": "dev",
-    "question": "An ninh dữ liệu được định nghĩa như thế nào trong Luật An ninh mạng 2025?",
-    "expected_answer": "An ninh dữ liệu là sự bảo đảm chất lượng dữ liệu và các hoạt động xử lý, sử dụng dữ liệu trên không gian mạng phục vụ phát triển kinh tế - xã hội, chuyển đổi số quốc gia, tránh bị truy cập, sử dụng, tiết lộ, sửa đổi trái phép, phá hoại hoặc hành vi khác gây phương hại.",
+    "question": "Theo khoản 3 Điều 2, an ninh dữ liệu bảo đảm chất lượng dữ liệu và hoạt động xử lý, sử dụng dữ liệu nhằm phục vụ những mục tiêu nào?",
+    "expected_answer": "An ninh dữ liệu là sự bảo đảm chất lượng dữ liệu và hoạt động xử lý, sử dụng dữ liệu trên không gian mạng phục vụ phát triển kinh tế - xã hội, chuyển đổi số quốc gia.",
     "gold_source_id": "luat_an_ninh_mang_116-2025",
     "gold_page": 1,
-    "evidence_quote": "An ninh đữ liệu là sự bảo đảm chất lượng dữ liệu và các hoạt động xử lý, sử dụng dữ liệu trên không gian mạng phục vụ phát triên kinh tê - xã hội, chuyên đôi sô quôc gia, tránh bị truy cập, sử dụng, tiệt lộ, sửa đôi trái phép, phá"
+    "evidence_quote": "An ninh đữ liệu là sự bảo đảm chất lượng dữ liệu và các hoạt động xử lý, sử dụng dữ liệu trên không gian mạng phục vụ phát triên kinh tê - xã hội, chuyên đôi sô quôc gia"
   },
   {
     "id": "q03",
@@ -119,7 +119,7 @@
     "question": "Định kỳ hằng năm, chủ quản hệ thống thông tin quan trọng về an ninh quốc gia phải thông báo kết quả tự kiểm tra bằng văn bản trước thời điểm nào?",
     "expected_answer": "Thông báo kết quả kiểm tra bằng văn bản trước tháng 10 hằng năm cho lực lượng chuyên trách bảo vệ an ninh mạng có thẩm quyền.",
     "gold_source_id": "luat_an_ninh_mang_116-2025",
-    "gold_page": 11,
+    "gold_page": 10,
     "evidence_quote": "thông báo kêt quả kiêm tra băng văn bản trước tháng 10 hăng năm cho lực lượng chuyên trách bảo vệ an ninh mạng có thâm quyên",
     "filter": {
       "chapter": "Chương II"
@@ -162,8 +162,11 @@
     "question": "Doanh nghiệp cung cấp dịch vụ Internet tại Việt Nam phải cung cấp thông tin người dùng cho lực lượng an ninh mạng trong thời hạn bao lâu kể từ khi có yêu cầu?",
     "expected_answer": "Chậm nhất là 24 giờ kể từ thời điểm có yêu cầu; trường hợp khẩn cấp đe dọa an ninh quốc gia, tính mạng con người thì chậm nhất là 03 giờ.",
     "gold_source_id": "luat_an_ninh_mang_116-2025",
-    "gold_page": 24,
-    "evidence_quote": "cung câp thông tin người dùng cho lực lượng chuyên trách bảo vệ an ninh mạng thuộc Bộ Công an chậm nhất là 24 giờ kế từ thời điểm có yêu cầu bằng văn bản hoặc thư điện tử, điện thoại hoặc hình thức trao đôi khác đã được xác nhận đê phục vụ xác minh, điêu tra, xử lý hành vi vi phạm pháp luật vê an ninh mạng; trường hợp khân câp đe dọa xâm hại an ninh quôc gia, đe dọa tính mạng con người, yêu câu cung câp thông tin chậm nhất là 03 giờ;"
+    "gold_page": [23, 24],
+    "evidence_quotes": [
+      "cung câp thông tin người dùng cho lực lượng chuyên trách bảo vệ an ninh mạng thuộc Bộ Công an chậm nhất là 24",
+      "giờ kế từ thời điểm có yêu cầu bằng văn bản hoặc thư điện tử, điện thoại hoặc hình thức trao đôi khác đã được xác nhận đê phục vụ xác minh, điêu tra, xử lý hành vi vi phạm pháp luật vê an ninh mạng; trường hợp khân câp đe dọa xâm hại an ninh quôc gia, đe dọa tính mạng con người, yêu câu cung câp thông tin chậm nhất là 03 giờ;"
+    ]
   },
   {
     "id": "q17",

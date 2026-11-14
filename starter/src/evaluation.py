@@ -18,6 +18,7 @@ def check_chunk_hit(question: dict[str, Any], chunk: dict[str, Any]) -> tuple[bo
     gold_page = question.get("gold_page")
     gold_source = question.get("gold_source_id") or question.get("gold_source")
     evidence_quote = question.get("evidence_quote", "")
+    evidence_quotes = question.get("evidence_quotes")
 
     chunk_page = chunk.get("page")
     chunk_source = chunk.get("document_id") or chunk.get("source")
@@ -53,17 +54,15 @@ def check_chunk_hit(question: dict[str, Any], chunk: dict[str, Any]) -> tuple[bo
     clean_chunk = _clean_str_for_matching(chunk_text)
     clean_evidence = _clean_str_for_matching(evidence_quote)
 
-    if not clean_evidence:
-        # Nếu không có quote cụ thể thì dựa vào page_match & source_match
-        evidence_match = True
-    else:
-        if clean_evidence in clean_chunk:
-            evidence_match = True
-        else:
-            # Nếu quote dài, kiểm tra xem các phần lớn của quote có nằm trong chunk không
-            sub_phrases = [p.strip() for p in re.split(r"[.?!;,\n]+", clean_evidence) if len(p.strip()) > 15]
-            if sub_phrases and any(phrase in clean_chunk for phrase in sub_phrases):
-                evidence_match = True
+    if evidence_quotes is not None:
+        clean_evidence_quotes = [
+            _clean_str_for_matching(quote) for quote in evidence_quotes
+        ]
+        evidence_match = bool(clean_evidence_quotes) and all(
+            quote in clean_chunk for quote in clean_evidence_quotes
+        )
+    elif clean_evidence:
+        evidence_match = clean_evidence in clean_chunk
 
     is_hit = bool(page_match and source_match and evidence_match)
 
@@ -104,6 +103,7 @@ def evaluate_query(question: dict[str, Any], hits: list[dict[str, Any]]) -> dict
         "gold_page": question.get("gold_page"),
         "gold_source_id": question.get("gold_source_id"),
         "evidence_quote": question.get("evidence_quote"),
+        "evidence_quotes": question.get("evidence_quotes"),
         "expected_answer": question.get("expected_answer"),
         "hit_at_1": 1 if hit_at_1 else 0,
         "evidence_hit_at_3": 1 if evidence_hit_at_3 else 0,
