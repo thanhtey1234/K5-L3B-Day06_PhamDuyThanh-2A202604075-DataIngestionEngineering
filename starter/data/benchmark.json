@@ -119,7 +119,7 @@
     "question": "Định kỳ hằng năm, chủ quản hệ thống thông tin quan trọng về an ninh quốc gia phải thông báo kết quả tự kiểm tra bằng văn bản trước thời điểm nào?",
     "expected_answer": "Thông báo kết quả kiểm tra bằng văn bản trước tháng 10 hằng năm cho lực lượng chuyên trách bảo vệ an ninh mạng có thẩm quyền.",
     "gold_source_id": "luat_an_ninh_mang_116-2025",
-    "gold_page": 11,
+    "gold_page": 10,
     "evidence_quote": "thông báo kêt quả kiêm tra băng văn bản trước tháng 10 hăng năm cho lực lượng chuyên trách bảo vệ an ninh mạng có thâm quyên",
     "filter": {
       "chapter": "Chương II"

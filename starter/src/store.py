@@ -49,11 +49,12 @@ class PgVectorStore:
             with conn.cursor() as cur:
                 cur.execute("DELETE FROM chunks WHERE strategy = %s;", (strategy,))
                 conn.commit()
+        print(f"Cleared existing chunks for strategy '{strategy}'")
 
     def upsert(self, strategy: str, chunks: list[Chunk], vectors: list[list[float]]) -> None:
         """Validate lengths/dimensions and write stable IDs without duplicates.
 
-        When re-ingesting changed source documents, remove obsolete chunks too.
+        Removes all existing chunks for this strategy to avoid stale or duplicate chunks across runs.
         """
         if len(chunks) != len(vectors):
             raise ValueError(f"Mismatched count: {len(chunks)} chunks vs {len(vectors)} vectors")
@@ -67,16 +68,10 @@ class PgVectorStore:
                     f"Vector dimension mismatch at index {idx}: expected {self.dimensions}, got {len(vec)}"
                 )
 
-        # Lấy danh sách document_id liên quan để dọn dẹp các chunk cũ nếu cần
-        doc_ids = list({chunk.document_id for chunk in chunks})
-
         with psycopg.connect(self.database_url) as conn:
             with conn.cursor() as cur:
-                # Xóa các chunk cũ của cùng chiến lược và document_id để tránh thừa chunk lỗi thời
-                cur.execute(
-                    "DELETE FROM chunks WHERE strategy = %s AND document_id = ANY(%s);",
-                    (strategy, doc_ids)
-                )
+                # Xóa toàn bộ chunk cũ của chiến lược này trước khi nạp mới để triệt để tránh duplicate chunks
+                cur.execute("DELETE FROM chunks WHERE strategy = %s;", (strategy,))
 
                 # Batch insert với ON CONFLICT
                 query = """

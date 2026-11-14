@@ -18,12 +18,22 @@ def load_corpus(data_dir: Path) -> list[DocumentPage]:
     """Discover and load documents from data directory (prioritizing pre-extracted JSONL or reading PDF)."""
     pages: list[DocumentPage] = []
 
+    # Đọc default document_id từ manifest.json nếu có
+    default_doc_id = "luat_an_ninh_mang_116-2025"
+    manifest_path = data_dir / "manifest.json"
+    if manifest_path.exists():
+        try:
+            with open(manifest_path, "r", encoding="utf-8") as f:
+                manifest_data = json.load(f)
+                default_doc_id = manifest_data.get("source_id", default_doc_id)
+        except Exception:
+            pass
+
     # 1. Ưu tiên tìm file JSONL đã trích xuất sẵn (ví dụ pages.jsonl từ OCR)
     jsonl_files = list(data_dir.glob("*.jsonl"))
     if jsonl_files:
         for jsonl_path in jsonl_files:
-            doc_id = jsonl_path.stem
-            pages.extend(load_jsonl(jsonl_path, document_id=doc_id, source=str(jsonl_path.name)))
+            pages.extend(load_jsonl(jsonl_path, document_id=default_doc_id, source=default_doc_id))
         return pages
 
     # 2. Nếu không có file JSONL, đọc từ các file PDF
@@ -123,6 +133,7 @@ def main() -> None:
     store.create_schema()
 
     # Ingest Strategy A
+    store.clear_strategy("strategy_a")
     t0 = time.time()
     texts_a = [c.text for c in chunks_a]
     print(f"Embedding Strategy A ({len(texts_a)} texts)...")
@@ -132,6 +143,7 @@ def main() -> None:
     print(f"Strategy A indexing completed in {time_a:.2f}s")
 
     # Ingest Strategy B
+    store.clear_strategy("strategy_b")
     t0 = time.time()
     texts_b = [c.text for c in chunks_b]
     print(f"Embedding Strategy B ({len(texts_b)} texts)...")

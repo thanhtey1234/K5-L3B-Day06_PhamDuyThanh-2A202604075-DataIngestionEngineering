@@ -36,16 +36,16 @@ def check_chunk_hit(question: dict[str, Any], chunk: dict[str, Any]) -> tuple[bo
     else:
         page_match = True
 
-    # 2. Kiểm tra Source
+    # 2. Kiểm tra Source (chỉ chấp nhận đúng gold_source_id)
     source_match = True
     if gold_source:
         chunk_meta = chunk.get("metadata", {})
         meta_source = chunk_meta.get("source_id") or chunk_meta.get("document_id")
         source_match = (
             (chunk_source == gold_source)
-            or (gold_source in str(chunk.get("source", "")))
             or (meta_source == gold_source)
-            or (str(chunk_source).lower() in ["pages", "corpus", "pages.jsonl"])
+            or (chunk.get("document_id") == gold_source)
+            or (chunk.get("source") == gold_source)
         )
 
     # 3. Kiểm tra Evidence Quote
