@@ -1,0 +1,214 @@
+[
+  {
+    "id": "q01",
+    "type": "direct",
+    "split": "dev",
+    "question": "Theo Luật An ninh mạng số 116/2025/QH15, an ninh mạng được giải thích như thế nào?",
+    "expected_answer": "An ninh mạng là sự ổn định, an ninh, an toàn của không gian mạng; bảo vệ hệ thống thông tin và bảo đảm thông tin, dữ liệu, hoạt động trên không gian mạng không gây phương hại đến an ninh quốc gia, trật tự, an toàn xã hội, quyền và lợi ích hợp pháp của cơ quan, tổ chức, cá nhân.",
+    "gold_source_id": "luat_an_ninh_mang_116-2025",
+    "gold_page": 1,
+    "evidence_quote": "An ninh mạng là sự ồn định, an ninh, an toàn của không gian mạng; bảo vệ hệ thông thông tin và bảo đảm thông tin, dữ liệu, hoạt động trên không gian mạng không gây phương hại đên an ninh quôc gia, trật tự, an toàn xã hội, quyên và lợi ích hợp pháp của cơ quan, tô chức, cá nhân."
+  },
+  {
+    "id": "q02",
+    "type": "direct",
+    "split": "dev",
+    "question": "An ninh dữ liệu được định nghĩa như thế nào trong Luật An ninh mạng 2025?",
+    "expected_answer": "An ninh dữ liệu là sự bảo đảm chất lượng dữ liệu và các hoạt động xử lý, sử dụng dữ liệu trên không gian mạng phục vụ phát triển kinh tế - xã hội, chuyển đổi số quốc gia, tránh bị truy cập, sử dụng, tiết lộ, sửa đổi trái phép, phá hoại hoặc hành vi khác gây phương hại.",
+    "gold_source_id": "luat_an_ninh_mang_116-2025",
+    "gold_page": 1,
+    "evidence_quote": "An ninh đữ liệu là sự bảo đảm chất lượng dữ liệu và các hoạt động xử lý, sử dụng dữ liệu trên không gian mạng phục vụ phát triên kinh tê - xã hội, chuyên đôi sô quôc gia, tránh bị truy cập, sử dụng, tiệt lộ, sửa đôi trái phép, phá"
+  },
+  {
+    "id": "q03",
+    "type": "direct",
+    "split": "dev",
+    "question": "Hành vi tấn công mạng được hiểu như thế nào theo Luật An ninh mạng 2025?",
+    "expected_answer": "Tấn công mạng là hành vi thực hiện trên không gian mạng bằng việc sử dụng công nghệ thông tin hoặc phương tiện điện tử để chiếm đoạt thông tin, gây rối loạn, gián đoạn, tê liệt hoạt động, phá hoại hoặc kiểm soát hệ thống thông tin, cơ sở dữ liệu.",
+    "gold_source_id": "luat_an_ninh_mang_116-2025",
+    "gold_page": 2,
+    "evidence_quote": "Tấn công mạng là hành vi thực hiện trên không gian mạng bằng VIỆC sử dụng công nghệ thông tin hoặc phương tiện điện tử đê chiêm đoạt thông tin, gây rôi loạn, gián đoạn, tê liệt hoạt động, phá hoại hoặc kiêm soát hệ thông mạng viên thông, mạng Internet, mạng máy tính, hệ thông thông tin"
+  },
+  {
+    "id": "q04",
+    "type": "paraphrase",
+    "split": "dev",
+    "question": "Luật An ninh mạng 2025 quy định 'sự cố an ninh mạng' là sự việc có đặc điểm gì?",
+    "expected_answer": "Là sự việc bất ngờ xảy ra trên không gian mạng xâm phạm an ninh quốc gia, trật tự, an toàn xã hội, quyền và lợi ích hợp pháp của cơ quan, tổ chức, cá nhân.",
+    "gold_source_id": "luat_an_ninh_mang_116-2025",
+    "gold_page": 3,
+    "evidence_quote": "Sự cố an ninh mạng là sự việc bất ngờ xảy ra trên không gian mạng xâm phạm an ninh quôc gia, trật tự, an toàn xã hội, quyên và lợi ích hợp pháp của cơ quan, tô chức, cá nhân."
+  },
+  {
+    "id": "q05",
+    "type": "direct",
+    "split": "dev",
+    "question": "Nguyên tắc bảo vệ an ninh mạng đầu tiên được quy định tại Điều 4 là gì?",
+    "expected_answer": "Tuân thủ Hiến pháp và pháp luật; bảo đảm an ninh, chủ quyền và lợi ích quốc gia trên không gian mạng.",
+    "gold_source_id": "luat_an_ninh_mang_116-2025",
+    "gold_page": 4,
+    "evidence_quote": "Tuân thủ Hiến pháp và pháp luật; bảo đảm an nỉnh, chủ quyền và lợi ích quôc gia trên không gian mạng."
+  },
+  {
+    "id": "q06",
+    "type": "multi_part",
+    "split": "dev",
+    "question": "Biện pháp bảo vệ an ninh mạng bao gồm những biện pháp nào theo khoản 1 Điều 5?",
+    "expected_answer": "Bao gồm thẩm định an ninh mạng; đánh giá điều kiện an ninh mạng; kiểm tra an ninh mạng; giám sát an ninh mạng; ứng phó, khắc phục sự cố an ninh mạng, v.v.",
+    "gold_source_id": "luat_an_ninh_mang_116-2025",
+    "gold_page": 4,
+    "evidence_quote": "a) Thẩm định an ninh mạng;\nb) Đánh giá điều kiện an ninh mạng;\nc) Kiểm tra an ninh mạng;\nđ) Giám sát an ninh mạng;\nđ) Ứng phó, khắc phục sự cô an ninh mạng;"
+  },
+  {
+    "id": "q07",
+    "type": "metadata_filter",
+    "split": "dev",
+    "question": "Theo Chương II của Luật An ninh mạng 2025, hệ thống thông tin được phân loại thành mấy cấp độ?",
+    "expected_answer": "Hệ thống thông tin được phân loại theo 5 cấp độ căn cứ vào mức độ tổn hại tới an ninh quốc gia, trật tự an toàn xã hội, quyền và lợi ích hợp pháp của tổ chức, cá nhân, lợi ích công cộng.",
+    "gold_source_id": "luat_an_ninh_mang_116-2025",
+    "gold_page": 8,
+    "evidence_quote": "Hệ thống thông tin được phân loại theo Š cấp độ căn cứ vào mức độ tôn hại tới an ninh quôc gia, trật tự, an toàn xã hội, quyên, lợi ích hợp pháp của tô chức, cá nhân, lợi ích công cộng",
+    "filter": {
+      "chapter": "Chương II"
+    }
+  },
+  {
+    "id": "q08",
+    "type": "direct",
+    "split": "dev",
+    "question": "Hệ thống thông tin cấp độ 5 có thể gây ra mức độ tổn hại như thế nào?",
+    "expected_answer": "Cấp độ 5 có thể làm tổn hại đặc biệt nghiêm trọng tới an ninh quốc gia.",
+    "gold_source_id": "luat_an_ninh_mang_116-2025",
+    "gold_page": 8,
+    "evidence_quote": "Cấp độ 5 có thể làm tổn hại đặc biệt nghiêm trọng tới an ninh quốc gia."
+  },
+  {
+    "id": "q09",
+    "type": "multi_part",
+    "split": "dev",
+    "question": "Theo Điều 9, hệ thống thông tin quan trọng về an ninh quốc gia gồm những lĩnh vực nào?",
+    "expected_answer": "Gồm hệ thống thông tin quân sự, an ninh, ngoại giao, cơ yếu; hệ thống thông tin lưu trữ bí mật nhà nước; phục vụ bảo quản tài liệu đặc biệt; năng lượng, tài chính, ngân hàng, viễn thông, giao thông vận tải, v.v.",
+    "gold_source_id": "luat_an_ninh_mang_116-2025",
+    "gold_page": 9,
+    "evidence_quote": "a) Hệ thống thông tin quân sự, an ninh, ngoại giao, cơ yếu;\nb) Hệ thống thông tin lưu trữ, xử lý thông tin thuộc bí mật nhà nước;"
+  },
+  {
+    "id": "q10",
+    "type": "direct",
+    "split": "dev",
+    "question": "Chủ quản hệ thống thông tin quan trọng về an ninh quốc gia phải thực hiện các nhiệm vụ và biện pháp bảo vệ nào theo Điều 10?",
+    "expected_answer": "Chủ quản hệ thống thông tin quan trọng về an ninh quốc gia phải thực hiện đầy đủ cả nhiệm vụ quy định tại khoản 1 và biện pháp quy định tại khoản 2 Điều 10.",
+    "gold_source_id": "luat_an_ninh_mang_116-2025",
+    "gold_page": 10,
+    "evidence_quote": "Chủ quản hệ thống thông tin thuộc danh mục hệ thống thông tin quan trọng vê an ninh quôc gia thực hiện đây đủ các nhiệm vụ, biện pháp quy định tại khoản I và khoản 2 Điêu này."
+  },
+  {
+    "id": "q11",
+    "type": "condition_exception",
+    "split": "dev",
+    "question": "Chủ quản hệ thống thông tin thuộc Cấp độ 1, Cấp độ 2 có bắt buộc phải áp dụng tất cả các biện pháp bảo vệ tại khoản 2 Điều 10 không?",
+    "expected_answer": "Không bắt buộc áp dụng tất cả, mà thực hiện đầy đủ nhiệm vụ tại khoản 1 và theo nhu cầu, khả năng thực tế lựa chọn áp dụng biện pháp quy định tại khoản 2.",
+    "gold_source_id": "luat_an_ninh_mang_116-2025",
+    "gold_page": 10,
+    "evidence_quote": "Chủ quản hệ thống thông tin thuộc Cấp độ 1, Cấp độ 2 thực hiện đầy đủ các nhiệm vụ quy định tại khoản 1 Điêu này và theo nhu câu, khả năng thực tê lựa chọn áp dụng biện pháp quy định tại khoản 2 Điêu này."
+  },
+  {
+    "id": "q12",
+    "type": "metadata_filter",
+    "split": "dev",
+    "question": "Định kỳ hằng năm, chủ quản hệ thống thông tin quan trọng về an ninh quốc gia phải thông báo kết quả tự kiểm tra bằng văn bản trước thời điểm nào?",
+    "expected_answer": "Thông báo kết quả kiểm tra bằng văn bản trước tháng 10 hằng năm cho lực lượng chuyên trách bảo vệ an ninh mạng có thẩm quyền.",
+    "gold_source_id": "luat_an_ninh_mang_116-2025",
+    "gold_page": 11,
+    "evidence_quote": "thông báo kêt quả kiêm tra băng văn bản trước tháng 10 hăng năm cho lực lượng chuyên trách bảo vệ an ninh mạng có thâm quyên",
+    "filter": {
+      "chapter": "Chương II"
+    }
+  },
+  {
+    "id": "q13",
+    "type": "direct",
+    "split": "dev",
+    "question": "Khi nào lực lượng chuyên trách tiến hành kiểm tra an ninh mạng đối với hệ thống thông tin không thuộc danh mục quan trọng về an ninh quốc gia?",
+    "expected_answer": "Khi có hành vi phạm tội mạng, tấn công, khủng bố, gián điệp mạng hoặc khi có đề nghị của chủ quản hệ thống thông tin.",
+    "gold_source_id": "luat_an_ninh_mang_116-2025",
+    "gold_page": 12,
+    "evidence_quote": "a) Khi có hành vi được quy định tại các khoản 12, 13, 14 và 15 Điều 2 của Luật này;\nb) Khi có đề nghị của chủ quản hệ thống thông tin."
+  },
+  {
+    "id": "q14",
+    "type": "direct",
+    "split": "dev",
+    "question": "Khi trẻ em sử dụng dịch vụ giá trị gia tăng trên không gian mạng, việc đăng ký tài khoản được quy định như thế nào?",
+    "expected_answer": "Cha, mẹ hoặc người giám hộ theo quy định của pháp luật về dân sự đăng ký tài khoản bằng thông tin của cha, mẹ hoặc người giám hộ và có trách nhiệm giám sát, quản lý nội dung.",
+    "gold_source_id": "luat_an_ninh_mang_116-2025",
+    "gold_page": 17,
+    "evidence_quote": "cha, mẹ hoặc người giám hộ theo quy định của pháp luật vê dân sự đăng ký tài khoản băng thông tin của cha, mẹ hoặc người giám hộ và có trách nhiệm giám sát, quản lý nội dung trẻ em truy cập, đăng tải và chia sẻ thông tin trên các nền tảng dịch vụ đó."
+  },
+  {
+    "id": "q15",
+    "type": "multi_part",
+    "split": "dev",
+    "question": "Những tình huống nào được coi là tình huống nguy hiểm về an ninh mạng theo Điều 20?",
+    "expected_answer": "Xuất hiện thông tin kích động nguy cơ bạo loạn; tấn công vào hệ thống quan trọng; tấn công diện rộng quy mô lớn; tấn công phá hủy công trình quan trọng; xâm phạm nghiêm trọng chủ quyền an ninh quốc gia.",
+    "gold_source_id": "luat_an_ninh_mang_116-2025",
+    "gold_page": 20,
+    "evidence_quote": "a) Xuất hiện thông tin kích động trên không gian mạng có nguy cơ xảy ra bạo loạn, phá rôi an ninh, khủng bô;\nb) Tấn công vào hệ thống thông tin quan trọng về an ninh quốc gia;"
+  },
+  {
+    "id": "q16",
+    "type": "direct",
+    "split": "test",
+    "question": "Doanh nghiệp cung cấp dịch vụ Internet tại Việt Nam phải cung cấp thông tin người dùng cho lực lượng an ninh mạng trong thời hạn bao lâu kể từ khi có yêu cầu?",
+    "expected_answer": "Chậm nhất là 24 giờ kể từ thời điểm có yêu cầu; trường hợp khẩn cấp đe dọa an ninh quốc gia, tính mạng con người thì chậm nhất là 03 giờ.",
+    "gold_source_id": "luat_an_ninh_mang_116-2025",
+    "gold_page": 24,
+    "evidence_quote": "cung câp thông tin người dùng cho lực lượng chuyên trách bảo vệ an ninh mạng thuộc Bộ Công an chậm nhất là 24 giờ kế từ thời điểm có yêu cầu bằng văn bản hoặc thư điện tử, điện thoại hoặc hình thức trao đôi khác đã được xác nhận đê phục vụ xác minh, điêu tra, xử lý hành vi vi phạm pháp luật vê an ninh mạng; trường hợp khân câp đe dọa xâm hại an ninh quôc gia, đe dọa tính mạng con người, yêu câu cung câp thông tin chậm nhất là 03 giờ;"
+  },
+  {
+    "id": "q17",
+    "type": "condition_exception",
+    "split": "test",
+    "question": "Trong trường hợp khẩn cấp đe dọa xâm hại an ninh quốc gia, yêu cầu ngăn chặn, xóa bỏ thông tin vi phạm phải được doanh nghiệp thực hiện chậm nhất là bao lâu?",
+    "expected_answer": "Yêu cầu ngăn chặn, xóa bỏ thông tin chậm nhất là 06 giờ.",
+    "gold_source_id": "luat_an_ninh_mang_116-2025",
+    "gold_page": 24,
+    "evidence_quote": "trường hợp khân câp đe dọa xâm hại an ninh quôc gia, yêu câu ngăn chặn, xóa bỏ thông tin chậm nhất là 06 giờ;"
+  },
+  {
+    "id": "q18",
+    "type": "metadata_filter",
+    "split": "test",
+    "question": "Theo quy định tại Chương V của Luật An ninh mạng 2025, doanh nghiệp kinh doanh sản phẩm, dịch vụ an ninh mạng bắt buộc phải có điều kiện gì?",
+    "expected_answer": "Doanh nghiệp kinh doanh sản phẩm, dịch vụ an ninh mạng phải có giấy phép kinh doanh sản phẩm, dịch vụ an ninh mạng.",
+    "gold_source_id": "luat_an_ninh_mang_116-2025",
+    "gold_page": 26,
+    "evidence_quote": "Doanh nghiệp kinh doanh sản phẩm, dịch vụ an ninh mạng phải có giấy phép kinh doanh sản phâm, dịch vụ an ninh mạng.",
+    "filter": {
+      "chapter": "Chương V"
+    }
+  },
+  {
+    "id": "q19",
+    "type": "metadata_filter",
+    "split": "test",
+    "question": "Theo Chương VI của Luật An ninh mạng 2025, các cơ quan, đơn vị phải bố trí tối thiểu bao nhiêu phần trăm kinh phí chuyển đổi số, CNTT cho bảo vệ an ninh mạng?",
+    "expected_answer": "Phải bố trí tối thiểu 15% tổng kinh phí thực hiện chương trình, đề án, dự án đầu tư chuyển đổi số, ứng dụng công nghệ thông tin để bảo vệ an ninh mạng.",
+    "gold_source_id": "luat_an_ninh_mang_116-2025",
+    "gold_page": 30,
+    "evidence_quote": "bô trí tôi thiêu 15% tông kinh phí thực hiện chương trình, đê án, dự án đầu tư chuyên đôi sô, ứng dụng công nghệ thông tin đề bảo vệ an ninh mạng.",
+    "filter": {
+      "chapter": "Chương VI"
+    }
+  },
+  {
+    "id": "q20",
+    "type": "direct",
+    "split": "test",
+    "question": "Luật An ninh mạng số 116/2025/QH15 có hiệu lực thi hành từ ngày nào và thay thế những luật nào?",
+    "expected_answer": "Luật có hiệu lực thi hành từ ngày 01 tháng 7 năm 2026. Luật An toàn thông tin mạng số 86/2015/QH13 và Luật An ninh mạng số 24/2018/QH14 hết hiệu lực kể từ ngày Luật này có hiệu lực thi hành.",
+    "gold_source_id": "luat_an_ninh_mang_116-2025",
+    "gold_page": 36,
+    "evidence_quote": "1. Luật này có hiệu lực thi hành từ ngày 01 tháng 7 năm 2026.\n\n2. Luật An toàn thông tin mạng số 86/2015/QH13 đã được sửa đổi, bổ sung một sô điêu theo Luật sô 35/2018/QH14; Luật An ninh mạng sô 24/2018/QH14 hết hiệu lực kê từ ngày Luật này có hiệu lực thi hành."
+  }
+]

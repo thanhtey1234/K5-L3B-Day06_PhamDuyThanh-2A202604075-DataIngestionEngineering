@@ -1,4 +1,4 @@
 strategy,chunking,chunk_size,overlap,metadata,filter,vectorizer,hypothesis,dev_hit1,dev_hit3,test_hit1,test_hit3,notes
-A,,,,,,,,,,,,
-B,,,,,,,,,,,,
-C,,,,,,,,,,,,
+A,fixed_size,500,50,document_id;source;page;chapter,none,AITeamVN/Vietnamese_Embedding (768d),Fixed-size chunking provides uniform token distribution but may split sentences mid-clause,11/15 (73.3%),13/15 (86.7%),4/5 (80.0%),5/5 (100.0%),209 chunks; 84.12s ingest; Overall Hit@3 18/20 (90.0%)
+B,by_paragraph,max 500,0,document_id;source;page;chapter,none,AITeamVN/Vietnamese_Embedding (768d),Paragraph chunking preserves legal clause coherence and complete legal provisions,11/15 (73.3%),12/15 (80.0%),3/5 (60.0%),5/5 (100.0%),235 chunks; 87.15s ingest; Perfect coherence 2.0/2.0
+C,by_paragraph,max 500,0,document_id;source;page;chapter,chapter,AITeamVN/Vietnamese_Embedding (768d),Metadata filtering by chapter eliminates cross-chapter keyword interference on filtered queries,11/15 (73.3%),12/15 (80.0%),3/5 (60.0%),5/5 (100.0%),235 chunks; Reused index; 100% filter compliance on test

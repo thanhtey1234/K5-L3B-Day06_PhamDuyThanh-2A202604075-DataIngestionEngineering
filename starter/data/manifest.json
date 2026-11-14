@@ -1,0 +1,17 @@
+{
+  "source_id": "luat_an_ninh_mang_116-2025",
+  "title": "Luật An ninh mạng số 116/2025/QH15",
+  "source_path_or_url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/01/luat116-2025.pdf",
+  "local_pdf_path": "starter/data/luat_an_ninh_mang_116-2025.pdf",
+  "extracted_corpus_path": "starter/data/pages.jsonl",
+  "license_or_permission": "Văn bản quy phạm pháp luật công khai của Quốc hội nước CHXHCN Việt Nam (thuộc phạm vi công cộng, không áp dụng quyền tác giả theo Luật Sở hữu trí tuệ)",
+  "accessed_at": "2026-11-14",
+  "document_type": "Văn bản quy phạm pháp luật",
+  "version": "116/2025/QH15",
+  "effective_date": "2026-07-01",
+  "total_physical_pages": 37,
+  "content_pages_count": 37,
+  "empty_pages_count": 0,
+  "page_ids": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37],
+  "note": "Corpus gồm 37 trang nội dung hợp lệ được trích xuất từ file PDF chính thức của Cổng Thông tin điện tử Chính phủ (https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/01/luat116-2025.pdf)."
+}
